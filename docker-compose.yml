@@ -38,10 +38,12 @@ services:
       args:
         # Same-origin API in production (empty => client fetches /api and /uploads)
         - NEXT_PUBLIC_API_URL=
+        # Baked into the Next.js rewrite destination (resolved at runtime on the compose network)
+        - BACKEND_INTERNAL_URL=http://backend:5000
     restart: unless-stopped
     environment:
-      # Coolify magic variable: exposes frontend:3000 on these domain(s) with SSL
-      - SERVICE_FQDN_FRONTEND_3000=${SERVICE_FQDN_FRONTEND_3000}
+      # Coolify magic variable: exposes frontend:3000 on this domain with SSL
+      - SERVICE_FQDN_FRONTEND_3000=https://maxtopnet.com
       - NODE_ENV=production
       - BACKEND_INTERNAL_URL=http://backend:5000
     depends_on:
