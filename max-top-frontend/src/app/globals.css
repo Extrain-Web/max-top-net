@@ -78,7 +78,7 @@ button { font-family: inherit; cursor: pointer; }
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 10px;
 }
 
 .section { padding: 5.5rem 0; }
@@ -231,13 +231,24 @@ textarea.field { resize: vertical; min-height: 130px; }
 @media (max-width: 1050px) {
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
+  /* when the hamburger shows, the CTA lives inside the drawer */
+  .nav-support { display: none; }
 }
 @media (max-width: 768px) {
   .section { padding: 3.5rem 0; }
-  .topbar-text-hide { display: none; }
-  :root { --header-h: 118px; }
+  /* hide the top header bar on mobile; header is just the navbar now */
+  .topbar { display: none; }
+  :root { --header-h: 68px; }
+  .navbar .container { height: 68px; }
+  .brand { font-size: 1.45rem; }
+  /* the vertical side button overlaps content on small screens */
+  .float-connect { display: none; }
+  .float-chat { bottom: 20px; right: 20px; width: 54px; height: 54px; }
 }
 @media (max-width: 480px) {
-  .container { padding: 0 1.1rem; }
-  .topbar .container { font-size: 0.78rem; }
+  .container { padding: 0 10px; }
+  .section-head { margin-bottom: 2.4rem; }
+  .section-head p { font-size: 0.98rem; }
+  .btn { padding: 13px 22px; font-size: 0.95rem; }
+  .eyebrow { font-size: 0.72rem; padding: 6px 14px; }
 }

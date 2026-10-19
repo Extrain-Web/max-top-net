@@ -89,7 +89,7 @@ export default function Header() {
             <Link href="/admin" aria-label="Admin Login" style={{ color: 'var(--ink)', display: 'flex', alignItems: 'center', padding: '8px' }}>
               <User size={22} />
             </Link>
-            <Link href={settings.supportButtonLink || '/contact'} className="btn btn-ghost" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>
+            <Link href={settings.supportButtonLink || '/contact'} className="btn btn-ghost nav-support" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>
               {settings.supportButtonText}
             </Link>
             <button className="nav-toggle" onClick={() => setOpen(true)} aria-label="Open menu">

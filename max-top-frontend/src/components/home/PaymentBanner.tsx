@@ -46,7 +46,7 @@ export default function PaymentBanner() {
           </div>
 
           {/* middle: logos */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 22, flexWrap: 'wrap', justifyContent: 'center' }}>
+          <div className="pay-banner-logos" style={{ display: 'flex', alignItems: 'center', gap: 22, flexWrap: 'wrap', justifyContent: 'center' }}>
             {methods.map((m) => (
               <PaymentLogo key={m._id} method={m} height={52} />
             ))}
@@ -61,7 +61,12 @@ export default function PaymentBanner() {
       <style>{`
         .pay-banner:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--primary); }
         .pay-banner:hover .pay-cta { background: var(--primary-600); }
-        @media (max-width: 760px){ .pay-banner { justify-content: center; text-align: center; } }
+        @media (max-width: 760px){
+          .pay-banner { justify-content: center; text-align: center; padding: 1.3rem 1.1rem !important; gap: 1.1rem !important; }
+          .pay-banner-logos { gap: 16px !important; }
+          .pay-banner-logos img { height: 32px !important; }
+          .pay-banner-logos span { height: 32px !important; font-size: 13px !important; }
+        }
       `}</style>
     </section>
   );
