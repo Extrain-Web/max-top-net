@@ -38,8 +38,8 @@ export default function PaymentPage() {
                   {/* top accent strip with logo */}
                   <div style={{ padding: '1.6rem 1.8rem 1.3rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, borderBottom: '1px solid var(--border)', background: `linear-gradient(120deg, #fff, ${accent}0f)` }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                      <div style={{ height: 54, minWidth: 64, borderRadius: 14, background: '#fff', border: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 12px', flexShrink: 0 }}>
-                        <PaymentLogo method={m} height={36} />
+                      <div style={{ height: 64, minWidth: 92, borderRadius: 14, background: '#fff', border: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 14px', flexShrink: 0 }}>
+                        <PaymentLogo method={m} height={46} />
                       </div>
                       <div>
                         <h3 style={{ fontSize: '1.15rem', lineHeight: 1.1 }}>{m.name}</h3>

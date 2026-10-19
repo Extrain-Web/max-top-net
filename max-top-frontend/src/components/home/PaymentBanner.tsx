@@ -46,9 +46,9 @@ export default function PaymentBanner() {
           </div>
 
           {/* middle: logos */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 22, flexWrap: 'wrap', justifyContent: 'center' }}>
             {methods.map((m) => (
-              <PaymentLogo key={m._id} method={m} height={38} />
+              <PaymentLogo key={m._id} method={m} height={52} />
             ))}
           </div>
 
