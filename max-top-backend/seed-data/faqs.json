@@ -1,0 +1,52 @@
+[
+  {
+    "_id": "6ac737b5d6f972e528594cbd",
+    "question": "Which areas are you covering right now?",
+    "answer": "Currently, our network covers Banaripara and adjacent areas, expanding rapidly to serve you better.",
+    "order": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.068Z",
+    "updatedAt": "2026-10-08T06:27:01.068Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cbe",
+    "question": "How can I contact MaxTopNet to raise any complaints?",
+    "answer": "You can call our 24/7 hotline at 01873379982 or send an email to support@maxtopnet.com. We resolve most issues within hours.",
+    "order": 1,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.068Z",
+    "updatedAt": "2026-10-08T06:27:01.068Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cbf",
+    "question": "How can I pay my bill?",
+    "answer": "We support seamless online payments through bKash, Nagad, Rocket, and conventional credit/debit cards via our payment gateway.",
+    "order": 2,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.068Z",
+    "updatedAt": "2026-10-08T06:27:01.068Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cc0",
+    "question": "How long is the installation time for a new connection?",
+    "answer": "Once your application is confirmed, our technical team installs the connection within 24 to 48 hours.",
+    "order": 3,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.068Z",
+    "updatedAt": "2026-10-08T06:27:01.068Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cc1",
+    "question": "What internet speeds do you offer?",
+    "answer": "We offer tailored plans ranging from 10 Mbps for light browsing to 50+ Mbps for heavy 4K streaming and gaming.",
+    "order": 4,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.068Z",
+    "updatedAt": "2026-10-08T06:27:01.068Z"
+  }
+]

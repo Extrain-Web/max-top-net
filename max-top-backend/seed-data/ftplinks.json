@@ -1,0 +1,80 @@
+[
+  {
+    "_id": "6ac737b5d6f972e528594cd2",
+    "name": "Movie Server",
+    "url": "http://ftp.maxtopnet.com/movies",
+    "logo": "",
+    "category": "Movies",
+    "description": "Latest HD & 4K movies",
+    "order": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.078Z",
+    "updatedAt": "2026-10-08T06:27:01.078Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cd3",
+    "name": "TV Series",
+    "url": "http://ftp.maxtopnet.com/series",
+    "logo": "",
+    "category": "Series",
+    "description": "Popular web series & shows",
+    "order": 1,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.078Z",
+    "updatedAt": "2026-10-08T06:27:01.078Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cd4",
+    "name": "Games",
+    "url": "http://ftp.maxtopnet.com/games",
+    "logo": "",
+    "category": "Games",
+    "description": "PC & console games",
+    "order": 2,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.078Z",
+    "updatedAt": "2026-10-08T06:27:01.078Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cd5",
+    "name": "Software",
+    "url": "http://ftp.maxtopnet.com/software",
+    "logo": "",
+    "category": "Software",
+    "description": "Apps, tools & utilities",
+    "order": 3,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.078Z",
+    "updatedAt": "2026-10-08T06:27:01.078Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cd6",
+    "name": "Music",
+    "url": "http://ftp.maxtopnet.com/music",
+    "logo": "",
+    "category": "Music",
+    "description": "Songs & albums",
+    "order": 4,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.078Z",
+    "updatedAt": "2026-10-08T06:27:01.078Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cd7",
+    "name": "Live TV",
+    "url": "http://ftp.maxtopnet.com/livetv",
+    "logo": "",
+    "category": "TV",
+    "description": "Live television streaming",
+    "order": 5,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.078Z",
+    "updatedAt": "2026-10-08T06:27:01.078Z"
+  }
+]

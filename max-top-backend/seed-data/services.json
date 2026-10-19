@@ -1,0 +1,46 @@
+[
+  {
+    "_id": "6ac737b5d6f972e528594cad",
+    "title": "Home Internet",
+    "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop",
+    "link": "",
+    "order": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.061Z",
+    "updatedAt": "2026-10-08T06:27:01.061Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cae",
+    "title": "Corporate Internet",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=600&auto=format&fit=crop",
+    "link": "",
+    "order": 1,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.061Z",
+    "updatedAt": "2026-10-08T06:27:01.061Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594caf",
+    "title": "No. 1 ISP In Banaripara, Barisal",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600&auto=format&fit=crop",
+    "link": "",
+    "order": 2,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.061Z",
+    "updatedAt": "2026-10-08T06:27:01.061Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cb0",
+    "title": "Technology Shop",
+    "image": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=600&auto=format&fit=crop",
+    "link": "",
+    "order": 3,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.061Z",
+    "updatedAt": "2026-10-08T06:27:01.061Z"
+  }
+]

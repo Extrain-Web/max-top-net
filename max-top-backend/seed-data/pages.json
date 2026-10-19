@@ -1,0 +1,93 @@
+[
+  {
+    "_id": "6ac737b5d6f972e528594cea",
+    "slug": "ftp-server",
+    "title": "FTP Server",
+    "subtitle": "Access the country's largest media library at full LAN speed",
+    "bannerImage": "",
+    "intro": "Browse thousands of movies, TV series, games, software and more — all at blazing local speed through our BDIX-connected FTP servers.",
+    "active": true,
+    "sections": [],
+    "createdAt": "2026-10-08T06:27:01.085Z",
+    "updatedAt": "2026-10-08T06:27:01.085Z",
+    "__v": 0
+  },
+  {
+    "_id": "6ac737b5d6f972e528594ceb",
+    "slug": "live-tv",
+    "title": "Live TV",
+    "subtitle": "Hundreds of HD channels, right at home",
+    "bannerImage": "",
+    "intro": "Enjoy crystal-clear live television with your MaxTopNet connection — news, sports, entertainment and kids channels all in one place.",
+    "active": true,
+    "sections": [],
+    "createdAt": "2026-10-08T06:27:01.087Z",
+    "updatedAt": "2026-10-08T06:27:01.087Z",
+    "__v": 0
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cec",
+    "slug": "game-server",
+    "title": "Game Servers",
+    "subtitle": "Low-latency routing for serious gamers",
+    "bannerImage": "",
+    "intro": "Game-optimized BDIX routing gives you the lowest possible ping on popular titles. No more lag, no more rubber-banding.",
+    "active": true,
+    "sections": [],
+    "createdAt": "2026-10-08T06:27:01.088Z",
+    "updatedAt": "2026-10-08T06:27:01.088Z",
+    "__v": 0
+  },
+  {
+    "_id": "6ac737b5d6f972e528594ced",
+    "slug": "area-coverage",
+    "title": "Area Coverage",
+    "subtitle": "Find out if we serve your area",
+    "bannerImage": "",
+    "intro": "We are rapidly expanding across Barisal and beyond. Check the areas we currently cover and the ones coming soon.",
+    "active": true,
+    "sections": [],
+    "createdAt": "2026-10-08T06:27:01.090Z",
+    "updatedAt": "2026-10-08T06:27:01.090Z",
+    "__v": 0
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cee",
+    "slug": "payment",
+    "title": "Payment",
+    "subtitle": "Pay your bill easily and securely",
+    "bannerImage": "",
+    "intro": "Pay your monthly bill through bKash, Nagad, Rocket or bank transfer. Fast, simple and secure.",
+    "active": true,
+    "sections": [],
+    "createdAt": "2026-10-08T06:27:01.091Z",
+    "updatedAt": "2026-10-08T06:27:01.091Z",
+    "__v": 0
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cef",
+    "slug": "about",
+    "title": "About Us",
+    "subtitle": "Connecting Banaripara to the world",
+    "bannerImage": "",
+    "intro": "MaxTopNet is a leading internet service provider dedicated to delivering ultra-fast, reliable connectivity with world-class customer support.",
+    "active": true,
+    "sections": [],
+    "createdAt": "2026-10-08T06:27:01.092Z",
+    "updatedAt": "2026-10-08T06:27:01.092Z",
+    "__v": 0
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cf0",
+    "slug": "contact",
+    "title": "Contact Us",
+    "subtitle": "We'd love to hear from you",
+    "bannerImage": "",
+    "intro": "Have a question or want a new connection? Reach out to our team — we respond fast.",
+    "active": true,
+    "sections": [],
+    "createdAt": "2026-10-08T06:27:01.093Z",
+    "updatedAt": "2026-10-08T06:27:01.093Z",
+    "__v": 0
+  }
+]

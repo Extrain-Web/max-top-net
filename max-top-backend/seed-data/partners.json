@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "6ac737b5d6f972e528594cc6",
+    "name": "Google",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    "link": "",
+    "order": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.073Z",
+    "updatedAt": "2026-10-08T06:27:01.073Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cc7",
+    "name": "Facebook",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/89/Facebook_Logo_%282019%29.svg",
+    "link": "",
+    "order": 1,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.073Z",
+    "updatedAt": "2026-10-08T06:27:01.073Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cc8",
+    "name": "Amazon",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    "link": "",
+    "order": 2,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.073Z",
+    "updatedAt": "2026-10-08T06:27:01.073Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cc9",
+    "name": "eBay",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg",
+    "link": "",
+    "order": 3,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.073Z",
+    "updatedAt": "2026-10-08T06:27:01.073Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cca",
+    "name": "Akamai",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Akamai_logo.svg",
+    "link": "",
+    "order": 4,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.073Z",
+    "updatedAt": "2026-10-08T06:27:01.073Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594ccb",
+    "name": "Cloudflare",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg",
+    "link": "",
+    "order": 5,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.073Z",
+    "updatedAt": "2026-10-08T06:27:01.073Z"
+  }
+]

@@ -1,0 +1,52 @@
+# MaxTopNet — full stack for Coolify (Docker Compose deployment)
+# Only the frontend is exposed publicly; it proxies /api and /uploads to the
+# internal backend via Next.js rewrites. MongoDB stays on the internal network.
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./max-top-backend
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - MONGODB_URI=mongodb://mongo:27017/max-top
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_EXPIRES=7d
+      - ADMIN_EMAIL=${ADMIN_EMAIL}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - CLIENT_URL=${CLIENT_URL}
+    volumes:
+      - uploads:/app/uploads
+    depends_on:
+      mongo:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./max-top-frontend
+      args:
+        # Same-origin API in production (empty => client fetches /api and /uploads)
+        - NEXT_PUBLIC_API_URL=
+    restart: unless-stopped
+    environment:
+      # Coolify magic variable: exposes frontend:3000 on these domain(s) with SSL
+      - SERVICE_FQDN_FRONTEND_3000=${SERVICE_FQDN_FRONTEND_3000}
+      - NODE_ENV=production
+      - BACKEND_INTERNAL_URL=http://backend:5000
+    depends_on:
+      - backend
+
+volumes:
+  mongo-data:
+  uploads:

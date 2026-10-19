@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "6ac737b5d6f972e528594ccc",
+    "name": "Banaripara Sadar",
+    "district": "Barisal",
+    "status": "available",
+    "order": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.075Z",
+    "updatedAt": "2026-10-08T06:27:01.075Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594ccd",
+    "name": "Chakhar",
+    "district": "Barisal",
+    "status": "available",
+    "order": 1,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.075Z",
+    "updatedAt": "2026-10-08T06:27:01.075Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cce",
+    "name": "Udaykathi",
+    "district": "Barisal",
+    "status": "available",
+    "order": 2,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.075Z",
+    "updatedAt": "2026-10-08T06:27:01.075Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594ccf",
+    "name": "Iluhar",
+    "district": "Barisal",
+    "status": "available",
+    "order": 3,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.075Z",
+    "updatedAt": "2026-10-08T06:27:01.075Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cd0",
+    "name": "Baisari",
+    "district": "Barisal",
+    "status": "coming-soon",
+    "order": 4,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.075Z",
+    "updatedAt": "2026-10-08T06:27:01.075Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cd1",
+    "name": "Swarupkathi",
+    "district": "Pirojpur",
+    "status": "coming-soon",
+    "order": 5,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.075Z",
+    "updatedAt": "2026-10-08T06:27:01.075Z"
+  }
+]

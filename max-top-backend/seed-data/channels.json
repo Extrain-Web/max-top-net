@@ -1,0 +1,98 @@
+[
+  {
+    "_id": "6ac737b5d6f972e528594cd8",
+    "name": "Somoy TV",
+    "logo": "/uploads/images--5--1791618215402.jpeg",
+    "category": "News",
+    "url": "",
+    "order": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.080Z",
+    "updatedAt": "2026-10-10T07:43:36.998Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cd9",
+    "name": "Jamuna TV",
+    "logo": "",
+    "category": "News",
+    "url": "",
+    "order": 1,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.080Z",
+    "updatedAt": "2026-10-08T06:27:01.080Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cda",
+    "name": "T Sports",
+    "logo": "",
+    "category": "Sports",
+    "url": "",
+    "order": 2,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.080Z",
+    "updatedAt": "2026-10-08T06:27:01.080Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cdb",
+    "name": "Gazi TV",
+    "logo": "",
+    "category": "Sports",
+    "url": "",
+    "order": 3,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.081Z",
+    "updatedAt": "2026-10-08T06:27:01.081Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cdc",
+    "name": "Maasranga",
+    "logo": "",
+    "category": "Entertainment",
+    "url": "",
+    "order": 4,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.081Z",
+    "updatedAt": "2026-10-08T06:27:01.081Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cdd",
+    "name": "Channel i",
+    "logo": "",
+    "category": "Entertainment",
+    "url": "",
+    "order": 5,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.081Z",
+    "updatedAt": "2026-10-08T06:27:01.081Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cde",
+    "name": "Duronto TV",
+    "logo": "",
+    "category": "Kids",
+    "url": "",
+    "order": 6,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.081Z",
+    "updatedAt": "2026-10-08T06:27:01.081Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cdf",
+    "name": "NTV",
+    "logo": "",
+    "category": "Entertainment",
+    "url": "",
+    "order": 7,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.081Z",
+    "updatedAt": "2026-10-08T06:27:01.081Z"
+  }
+]

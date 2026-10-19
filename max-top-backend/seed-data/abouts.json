@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "6ac737b5d6f972e528594ca5",
+    "key": "main",
+    "badge": "About MaxtopTech",
+    "title": "Connecting You To",
+    "highlight": "The World",
+    "description": "We are dedicated to providing the best internet service in the region. Enjoy uninterrupted browsing, gaming, and streaming with our state-of-the-art fiber optic infrastructure.",
+    "points": [
+      "High-speed fiber optic network with 99.9% uptime",
+      "Dedicated BDIX connectivity for ultra-fast local content",
+      "24/7 proactive customer support with instant response"
+    ],
+    "buttonText": "Discover More",
+    "buttonLink": "/about",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop",
+    "experienceYears": "10+",
+    "experienceLabel": "Years of Experience",
+    "createdAt": "2026-10-08T06:27:01.004Z",
+    "updatedAt": "2026-10-08T06:27:01.004Z",
+    "__v": 0
+  }
+]

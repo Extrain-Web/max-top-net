@@ -1,0 +1,58 @@
+[
+  {
+    "_id": "6ac737b5d6f972e528594cc2",
+    "name": "Mustafizur Rahman MugdhO",
+    "role": "Full-Stack Developer",
+    "text": "Internet speed is really good. They replaced a new ONU after complaining. Customer support is good. 5/5...",
+    "rating": 5,
+    "avatar": "",
+    "bg": "#6610f2",
+    "order": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.070Z",
+    "updatedAt": "2026-10-08T06:27:01.070Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cc3",
+    "name": "Mahir er Khela",
+    "role": "E-Commerce Specialist",
+    "text": "Their service is very good and their customer care is excellent.",
+    "rating": 5,
+    "avatar": "",
+    "bg": "#1a202c",
+    "order": 1,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.070Z",
+    "updatedAt": "2026-10-08T06:27:01.070Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cc4",
+    "name": "Rakib Ahmed",
+    "role": "HR Operations Specialist",
+    "text": "Such a beautiful environment and lots of nice people and real ISP like never seen.",
+    "rating": 5,
+    "avatar": "",
+    "bg": "#10b981",
+    "order": 2,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.070Z",
+    "updatedAt": "2026-10-08T06:27:01.070Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cc5",
+    "name": "Md. Akramul Haque",
+    "role": "Network Systems Analyst",
+    "text": "MaxTopNet is one of the leading Nationwide ISP in Bangladesh. Providing best quality Bandwidth...",
+    "rating": 5,
+    "avatar": "",
+    "bg": "#047857",
+    "order": 3,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.070Z",
+    "updatedAt": "2026-10-08T06:27:01.070Z"
+  }
+]

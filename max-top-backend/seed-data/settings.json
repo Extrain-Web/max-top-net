@@ -1,0 +1,60 @@
+[
+  {
+    "_id": "6ac737b4d6f972e528594c9e",
+    "key": "main",
+    "logo": "",
+    "logoTextLight": "Max",
+    "logoTextBold": "topTech",
+    "topbarPhone": "01873379982",
+    "topbarText": "BTRC Approved Tariff",
+    "topbarEnabled": true,
+    "supportButtonText": "Maxtop Support",
+    "supportButtonLink": "/contact",
+    "getConnectionText": "Get Connection",
+    "phone": "+880 1873 379982",
+    "email": "support@maxtopnet.com",
+    "address": "Banaripara, Barisal, Bangladesh",
+    "mapEmbed": "",
+    "footerAbout": "Experience the future of connectivity with ultra-fast internet and premium live TV services designed for your lifestyle.",
+    "seoTitle": "MaxTopNet | Ultra-Fast Internet & TV",
+    "seoDescription": "Experience the future of connectivity with MaxTopNet. Blazing fast internet, HD Live TV, and low-latency game servers.",
+    "primaryColor": "#94c11e",
+    "footerQuickLinks": [
+      {
+        "_id": "6ac737b4d6f972e528594c9f",
+        "label": "Broadband Internet",
+        "href": "/"
+      },
+      {
+        "_id": "6ac737b4d6f972e528594ca0",
+        "label": "Live TV",
+        "href": "/live-tv"
+      },
+      {
+        "_id": "6ac737b4d6f972e528594ca1",
+        "label": "Game Servers",
+        "href": "/game-server"
+      }
+    ],
+    "socials": [
+      {
+        "_id": "6ac737b4d6f972e528594ca2",
+        "platform": "facebook",
+        "url": "https://facebook.com"
+      },
+      {
+        "_id": "6ac737b5d6f972e528594ca3",
+        "platform": "youtube",
+        "url": "https://youtube.com"
+      },
+      {
+        "_id": "6ac737b5d6f972e528594ca4",
+        "platform": "whatsapp",
+        "url": "https://wa.me/8801873379982"
+      }
+    ],
+    "createdAt": "2026-10-08T06:27:01.000Z",
+    "updatedAt": "2026-10-08T06:27:01.000Z",
+    "__v": 0
+  }
+]

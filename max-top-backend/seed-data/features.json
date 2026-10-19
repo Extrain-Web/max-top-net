@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "6ac737b5d6f972e528594cb7",
+    "icon": "Headphones",
+    "title": "24/7 Help & Support",
+    "desc": "Our friendly and helpful customer support team is always ready to assist you day or night.",
+    "order": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.066Z",
+    "updatedAt": "2026-10-08T06:27:01.066Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cb8",
+    "icon": "Zap",
+    "title": "Lag-Free Gaming",
+    "desc": "Special game-friendly routing to ensure a seamless, lag-free online gaming experience.",
+    "order": 1,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.066Z",
+    "updatedAt": "2026-10-08T06:27:01.066Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cb9",
+    "icon": "Gamepad2",
+    "title": "Super Stable Connection",
+    "desc": "Enjoy smooth daily browsing with extremely low ping and no lag.",
+    "order": 2,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.066Z",
+    "updatedAt": "2026-10-08T06:27:01.066Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cba",
+    "icon": "Wifi",
+    "title": "Powerful Internet",
+    "desc": "High-speed, reliable fiber internet built for your work, study, and family needs.",
+    "order": 3,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.066Z",
+    "updatedAt": "2026-10-08T06:27:01.066Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cbb",
+    "icon": "ShieldCheck",
+    "title": "Safe & Secure Browsing",
+    "desc": "Advanced network security to keep your personal data and family safe online.",
+    "order": 4,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.066Z",
+    "updatedAt": "2026-10-08T06:27:01.066Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cbc",
+    "icon": "Server",
+    "title": "Largest FTP Server",
+    "desc": "Get unlimited access to the country's biggest library of movies, games, and software.",
+    "order": 5,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.066Z",
+    "updatedAt": "2026-10-08T06:27:01.066Z"
+  }
+]

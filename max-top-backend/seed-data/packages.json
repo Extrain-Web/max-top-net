@@ -1,0 +1,128 @@
+[
+  {
+    "_id": "6ac737b5d6f972e528594cb1",
+    "name": "Starter Plan",
+    "speed": "10",
+    "unit": "Mbps",
+    "price": "500",
+    "period": "Month",
+    "features": [
+      "Optical Fiber Connection",
+      "Connection Charge Free",
+      "24/7 Customer Support"
+    ],
+    "popular": false,
+    "buttonText": "Choose Plan",
+    "buttonLink": "/contact",
+    "order": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.064Z",
+    "updatedAt": "2026-10-08T06:27:01.064Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cb2",
+    "name": "Basic Plan",
+    "speed": "12",
+    "unit": "Mbps",
+    "price": "600",
+    "period": "Month",
+    "features": [
+      "Optical Fiber Connection",
+      "Connection Charge Free",
+      "24/7 Customer Support"
+    ],
+    "popular": false,
+    "buttonText": "Choose Plan",
+    "buttonLink": "/contact",
+    "order": 1,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.064Z",
+    "updatedAt": "2026-10-08T06:27:01.064Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cb3",
+    "name": "Popular Plan",
+    "speed": "15",
+    "unit": "Mbps",
+    "price": "700",
+    "period": "Month",
+    "features": [
+      "Optical Fiber Connection",
+      "Connection Charge Free",
+      "24/7 Customer Support"
+    ],
+    "popular": true,
+    "buttonText": "Choose Plan",
+    "buttonLink": "/contact",
+    "order": 2,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.064Z",
+    "updatedAt": "2026-10-08T06:27:01.064Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cb4",
+    "name": "Standard Plan",
+    "speed": "20",
+    "unit": "Mbps",
+    "price": "800",
+    "period": "Month",
+    "features": [
+      "Optical Fiber Connection",
+      "Connection Charge Free",
+      "24/7 Customer Support"
+    ],
+    "popular": false,
+    "buttonText": "Choose Plan",
+    "buttonLink": "/contact",
+    "order": 3,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.064Z",
+    "updatedAt": "2026-10-08T06:27:01.064Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cb5",
+    "name": "Premium Plan",
+    "speed": "30",
+    "unit": "Mbps",
+    "price": "1000",
+    "period": "Month",
+    "features": [
+      "Optical Fiber Connection",
+      "Connection Charge Free",
+      "24/7 Customer Support"
+    ],
+    "popular": false,
+    "buttonText": "Choose Plan",
+    "buttonLink": "/contact",
+    "order": 4,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.064Z",
+    "updatedAt": "2026-10-08T06:27:01.064Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594cb6",
+    "name": "Ultra Plan",
+    "speed": "50",
+    "unit": "Mbps",
+    "price": "1500",
+    "period": "Month",
+    "features": [
+      "Optical Fiber Connection",
+      "Connection Charge Free",
+      "24/7 Customer Support"
+    ],
+    "popular": false,
+    "buttonText": "Choose Plan",
+    "buttonLink": "/contact",
+    "order": 5,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.064Z",
+    "updatedAt": "2026-10-08T06:27:01.064Z"
+  }
+]

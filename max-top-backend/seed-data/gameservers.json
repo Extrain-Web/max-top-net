@@ -1,0 +1,80 @@
+[
+  {
+    "_id": "6ac737b5d6f972e528594ce0",
+    "name": "Valorant SA",
+    "logo": "",
+    "ping": "45ms",
+    "region": "Singapore",
+    "url": "",
+    "order": 0,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.082Z",
+    "updatedAt": "2026-10-08T06:27:01.082Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594ce1",
+    "name": "PUBG Mobile",
+    "logo": "",
+    "ping": "38ms",
+    "region": "Local BDIX",
+    "url": "",
+    "order": 1,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.082Z",
+    "updatedAt": "2026-10-08T06:27:01.082Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594ce2",
+    "name": "Free Fire",
+    "logo": "",
+    "ping": "30ms",
+    "region": "Local BDIX",
+    "url": "",
+    "order": 2,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.082Z",
+    "updatedAt": "2026-10-08T06:27:01.082Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594ce3",
+    "name": "Counter-Strike 2",
+    "logo": "",
+    "ping": "55ms",
+    "region": "Singapore",
+    "url": "",
+    "order": 3,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.082Z",
+    "updatedAt": "2026-10-08T06:27:01.082Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594ce4",
+    "name": "Call of Duty Mobile",
+    "logo": "",
+    "ping": "42ms",
+    "region": "Singapore",
+    "url": "",
+    "order": 4,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.082Z",
+    "updatedAt": "2026-10-08T06:27:01.082Z"
+  },
+  {
+    "_id": "6ac737b5d6f972e528594ce5",
+    "name": "eFootball",
+    "logo": "",
+    "ping": "35ms",
+    "region": "Local BDIX",
+    "url": "",
+    "order": 5,
+    "active": true,
+    "__v": 0,
+    "createdAt": "2026-10-08T06:27:01.082Z",
+    "updatedAt": "2026-10-08T06:27:01.082Z"
+  }
+]
