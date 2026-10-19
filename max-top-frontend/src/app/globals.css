@@ -236,6 +236,8 @@ textarea.field { resize: vertical; min-height: 130px; }
 }
 @media (max-width: 768px) {
   .section { padding: 3.5rem 0; }
+  /* comfortable mobile gutter (desktop keeps the tighter 10px) */
+  .container { padding: 0 18px; }
   /* hide the top header bar on mobile; header is just the navbar now */
   .topbar { display: none; }
   :root { --header-h: 68px; }
@@ -246,7 +248,7 @@ textarea.field { resize: vertical; min-height: 130px; }
   .float-chat { bottom: 20px; right: 20px; width: 54px; height: 54px; }
 }
 @media (max-width: 480px) {
-  .container { padding: 0 10px; }
+  .container { padding: 0 16px; }
   .section-head { margin-bottom: 2.4rem; }
   .section-head p { font-size: 0.98rem; }
   .btn { padding: 13px 22px; font-size: 0.95rem; }
