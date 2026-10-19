@@ -38,7 +38,7 @@
   --shadow-primary: 0 14px 30px var(--primary-glow);
 
   --container: 1240px;
-  --header-h: 128px;
+  --header-h: 123px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -240,7 +240,7 @@ textarea.field { resize: vertical; min-height: 130px; }
   .container { padding: 0 18px; }
   /* hide the top header bar on mobile; header is just the navbar now */
   .topbar { display: none; }
-  :root { --header-h: 68px; }
+  :root { --header-h: 69px; }
   .navbar .container { height: 68px; }
   .brand { font-size: 1.45rem; }
   /* the vertical side button overlaps content on small screens */
