@@ -42,7 +42,9 @@ services:
         - BACKEND_INTERNAL_URL=http://backend:5000
     restart: unless-stopped
     environment:
-      # Coolify magic variable: exposes frontend:3000 on this domain with SSL
+      # Coolify magic variables: expose frontend on this domain with SSL.
+      # The no-suffix var sets the Traefik host; the _3000 var pins the container port.
+      - SERVICE_FQDN_FRONTEND=https://maxtopnet.com
       - SERVICE_FQDN_FRONTEND_3000=https://maxtopnet.com
       - NODE_ENV=production
       - BACKEND_INTERNAL_URL=http://backend:5000
