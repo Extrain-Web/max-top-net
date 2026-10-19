@@ -227,6 +227,9 @@ textarea.field { resize: vertical; min-height: 130px; }
 .pill-green { background: var(--primary-soft); color: var(--primary-700); }
 .pill-soon { background: #fef3c7; color: #b45309; }
 
+/* ---------- Hero height ---------- */
+.hero-full { height: calc(100vh - var(--header-h)); min-height: 540px; max-height: 760px; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1050px) {
   .nav-links { display: none; }
@@ -238,6 +241,9 @@ textarea.field { resize: vertical; min-height: 130px; }
   .section { padding: 3.5rem 0; }
   /* comfortable mobile gutter (desktop keeps the tighter 10px) */
   .container { padding: 0 18px; }
+  /* shorter, content-sized hero on mobile so there's no big empty gap on top */
+  .hero-full { height: auto; min-height: 0; max-height: none; }
+  .hero-full .container { padding-top: 2.4rem; padding-bottom: 2.6rem; }
   /* hide the top header bar on mobile; header is just the navbar now */
   .topbar { display: none; }
   :root { --header-h: 69px; }

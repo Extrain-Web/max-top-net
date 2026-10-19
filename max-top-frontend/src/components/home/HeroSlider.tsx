@@ -28,7 +28,7 @@ export default function HeroSlider() {
   }
 
   return (
-    <section className="hero-full" style={{ position: 'relative', height: 'calc(100vh - var(--header-h))', minHeight: 540, maxHeight: 760, overflow: 'hidden' }}>
+    <section className="hero-full" style={{ position: 'relative', overflow: 'hidden' }}>
       {slides.map((s, idx) => (
         <div
           key={s._id}
