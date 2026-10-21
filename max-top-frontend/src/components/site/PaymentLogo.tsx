@@ -6,12 +6,12 @@ import type { PaymentMethod } from '@/lib/types';
 // Built-in brand logos (served from the frontend's /public/payments folder).
 // Keyed by a normalized method name.
 const BUILTIN: Record<string, string> = {
-  bkash: '/payments/bkash.png',
-  nagad: '/payments/nagad.svg',
-  rocket: '/payments/rocket.png',
-  upay: '/payments/upay.webp',
-  sslcommerz: '/payments/sslcommerz.png',
-  sslcommerce: '/payments/sslcommerz.png',
+  bkash: '/payments/bkash.png?v=2',
+  nagad: '/payments/nagad.svg?v=2',
+  rocket: '/payments/rocket.png?v=2',
+  upay: '/payments/upay.webp?v=2',
+  sslcommerz: '/payments/sslcommerz.png?v=2',
+  sslcommerce: '/payments/sslcommerz.png?v=2',
 };
 
 const normalize = (s: string) => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -21,16 +21,26 @@ const normalize = (s: string) => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '
 export default function PaymentLogo({
   method,
   height = 40,
+  className = '',
 }: {
   method: Pick<PaymentMethod, 'name' | 'logo' | 'color'>;
   height?: number;
+  className?: string;
 }) {
   const builtin = BUILTIN[normalize(method.name)];
   const src = method.logo ? imgUrl(method.logo) : builtin;
+  const slug = normalize(method.name);
 
   if (src) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={src} alt={method.name} style={{ height, width: 'auto', maxWidth: '100%', objectFit: 'contain' }} />;
+    return (
+      <img
+        src={src}
+        alt={method.name}
+        className={`payment-logo payment-logo-${slug} ${className}`.trim()}
+        style={{ height, width: 'auto', maxWidth: '100%', objectFit: 'contain' }}
+      />
+    );
   }
 
   const color = method.color || '#8bbe1f';

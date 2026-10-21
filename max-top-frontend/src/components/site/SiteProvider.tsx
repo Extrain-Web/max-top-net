@@ -39,11 +39,13 @@ export default function SiteProvider({ children }: { children: React.ReactNode }
 
   useEffect(() => {
     getData<Settings>('/settings', DEFAULT_SETTINGS).then((s) => {
-      setSettings({ ...DEFAULT_SETTINGS, ...s });
+      const brandColor =
+        s.primaryColor && s.primaryColor.toLowerCase() !== '#ff151b'
+          ? s.primaryColor
+          : '#8bbe1f';
+      setSettings({ ...DEFAULT_SETTINGS, ...s, primaryColor: brandColor });
       setLoading(false);
-      if (s.primaryColor) {
-        document.documentElement.style.setProperty('--primary', s.primaryColor);
-      }
+      document.documentElement.style.setProperty('--primary', brandColor);
     });
   }, []);
 

@@ -11,8 +11,6 @@ import { imgUrl } from '@/lib/api';
 const NAV = [
   { label: 'Home', href: '/' },
   { label: 'FTP Server', href: '/ftp-server' },
-  { label: 'Live TV', href: '/live-tv' },
-  { label: 'Game Server', href: '/game-server' },
   { label: 'Area Coverage', href: '/area-coverage' },
   { label: 'Payment', href: '/payment' },
   { label: 'About us', href: '/about' },
