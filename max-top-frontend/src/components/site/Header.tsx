@@ -104,12 +104,14 @@ export default function Header() {
                       {n.label} <ChevronDown size={15} style={{ marginLeft: 2 }} />
                     </Link>
                     <div className="nav-dropdown">
-                      {items.map((it, i) => (
-                        <Link key={i} href={n.href} className="nav-dd-item">
-                          <span className="nav-dd-ic"><Icon name={it.icon} size={17} color="var(--primary-700)" /></span>
-                          {it.label}
-                        </Link>
-                      ))}
+                      <div className="container nav-dropdown-inner">
+                        {items.map((it, i) => (
+                          <Link key={i} href={n.href} className="nav-dd-item">
+                            <span className="nav-dd-ic"><Icon name={it.icon} size={19} color="var(--primary-700)" /></span>
+                            {it.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 );
