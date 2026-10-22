@@ -99,7 +99,7 @@ export default function LiveChat() {
 
   return (
     <>
-      <button className="chat-fab" onClick={() => setOpen((o) => !o)} aria-label="Live chat">
+      <button className={`chat-fab ${open ? 'open' : ''}`} onClick={() => setOpen((o) => !o)} aria-label="Live chat">
         {open ? <X size={26} /> : <MessageCircle size={28} />}
         {!open && <span className="chat-fab-dot" />}
       </button>
@@ -139,9 +139,13 @@ export default function LiveChat() {
       </div>
 
       <style>{`
-        .chat-fab { position: fixed; bottom: 26px; right: 26px; z-index: 1900; width: 60px; height: 60px; border-radius: 50%; background: var(--primary); color: var(--ink); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 28px var(--primary-glow); transition: transform 0.2s; }
-        .chat-fab:hover { transform: scale(1.07); }
-        .chat-fab-dot { position: absolute; top: 12px; right: 12px; width: 11px; height: 11px; border-radius: 50%; background: #16a34a; border: 2px solid #fff; }
+        .chat-fab { position: fixed; bottom: 26px; right: 26px; z-index: 1900; width: 60px; height: 60px; border-radius: 50%; background: var(--primary); color: var(--ink); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 28px var(--primary-glow); animation: chatGlow 2s ease-out infinite, chatBob 2.6s ease-in-out infinite; }
+        .chat-fab:hover { transform: scale(1.08); animation-play-state: paused; }
+        .chat-fab.open { animation: none; }
+        @keyframes chatGlow { 0% { box-shadow: 0 10px 28px var(--primary-glow), 0 0 0 0 rgba(139,190,31,0.65); } 70% { box-shadow: 0 10px 28px var(--primary-glow), 0 0 0 18px rgba(139,190,31,0); } 100% { box-shadow: 0 10px 28px var(--primary-glow), 0 0 0 0 rgba(139,190,31,0); } }
+        @keyframes chatBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+        .chat-fab-dot { position: absolute; top: 12px; right: 12px; width: 11px; height: 11px; border-radius: 50%; background: #16a34a; border: 2px solid #fff; animation: chatDot 1.4s ease-in-out infinite; }
+        @keyframes chatDot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.35); opacity: 0.7; } }
         .chat-panel { position: fixed; bottom: 98px; right: 26px; z-index: 1900; width: 370px; max-width: calc(100vw - 32px); height: 540px; max-height: calc(100vh - 140px); background: #fff; border-radius: 18px; box-shadow: 0 24px 60px rgba(15,27,45,0.3); display: flex; flex-direction: column; overflow: hidden; opacity: 0; transform: translateY(20px) scale(0.96); pointer-events: none; transition: all 0.28s cubic-bezier(0.22,1,0.36,1); }
         .chat-panel.open { opacity: 1; transform: none; pointer-events: auto; }
         .chat-header { background: linear-gradient(120deg, var(--ink), var(--ink-700)); color: #fff; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }

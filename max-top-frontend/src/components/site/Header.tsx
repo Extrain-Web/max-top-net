@@ -50,7 +50,7 @@ export default function Header() {
   const isActive = (href: string) =>
     href === '/' ? pathname === '/' : pathname.startsWith(href);
 
-  const connectText = settings.supportButtonText || 'সংযোগ করুন';
+  const connectText = settings.supportButtonText || 'Get Connection';
 
   const dropItems = (kind: 'service' | 'ftp') =>
     kind === 'service'
@@ -104,13 +104,18 @@ export default function Header() {
                       {n.label} <ChevronDown size={15} style={{ marginLeft: 2 }} />
                     </Link>
                     <div className="nav-dropdown">
-                      <div className="container nav-dropdown-inner">
-                        {items.map((it, i) => (
-                          <Link key={i} href={n.href} className="nav-dd-item">
-                            <span className="nav-dd-ic"><Icon name={it.icon} size={19} color="var(--primary-700)" /></span>
-                            {it.label}
-                          </Link>
-                        ))}
+                      <div className="container">
+                        <div className="nav-dd-head">
+                          {n.dropdown === 'service' ? 'Our Services' : 'FTP Server Categories'}
+                        </div>
+                        <div className="nav-dropdown-inner">
+                          {items.map((it, i) => (
+                            <Link key={i} href={n.href} className="nav-dd-item">
+                              <span className="nav-dd-ic"><Icon name={it.icon} size={20} color="var(--primary-700)" /></span>
+                              {it.label}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -7,7 +7,6 @@ import PackagesSection from '@/components/home/PackagesSection';
 import FeaturesSection from '@/components/home/FeaturesSection';
 import FaqSection from '@/components/home/FaqSection';
 import TestimonialSection from '@/components/home/TestimonialSection';
-import TechnologyPartners from '@/components/home/TechnologyPartners';
 import PopupBanner from '@/components/home/PopupBanner';
 
 export default function HomePage() {
@@ -23,7 +22,6 @@ export default function HomePage() {
       <FeaturesSection />
       <FaqSection />
       <TestimonialSection />
-      <TechnologyPartners />
     </>
   );
 }
