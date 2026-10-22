@@ -3,13 +3,17 @@
 import {
   Headphones, Zap, Gamepad2, Wifi, ShieldCheck, Server, Globe, Signal,
   Tv, Download, MapPin, CreditCard, Users, Clock, Rocket, Award,
-  Network, Cloud, Cable, MonitorPlay, Router, Star, type LucideIcon,
+  Network, Cloud, Cable, MonitorPlay, Router, Star,
+  Video, Camera, Wrench, ShoppingCart, GraduationCap, Fingerprint,
+  Settings, Headset, Building2, Cpu, type LucideIcon,
 } from 'lucide-react';
 
 const map: Record<string, LucideIcon> = {
   Headphones, Zap, Gamepad2, Wifi, ShieldCheck, Server, Globe, Signal,
   Tv, Download, MapPin, CreditCard, Users, Clock, Rocket, Award,
   Network, Cloud, Cable, MonitorPlay, Router, Star,
+  Video, Camera, Wrench, ShoppingCart, GraduationCap, Fingerprint,
+  Settings, Headset, Building2, Cpu,
 };
 
 export default function Icon({

@@ -45,6 +45,7 @@ export interface About {
 }
 
 export interface Service { _id: string; title: string; image: string; link: string; order: number; }
+export interface ServiceItem { _id: string; title: string; description: string; icon: string; image: string; link: string; order: number; }
 export interface Package {
   _id: string; name: string; speed: string; unit: string; price: string; period: string;
   features: string[]; popular: boolean; buttonText: string; buttonLink: string; order: number; active: boolean;

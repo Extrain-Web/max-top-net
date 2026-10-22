@@ -3,13 +3,15 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Phone, Menu, X, ShieldCheck, User } from 'lucide-react';
+import { Phone, Menu, X, User } from 'lucide-react';
 import { useSite } from './SiteProvider';
 import SocialIcon from './Social';
+import { useConnection } from './ConnectionModal';
 import { imgUrl } from '@/lib/api';
 
 const NAV = [
   { label: 'Home', href: '/' },
+  { label: 'Service', href: '/service' },
   { label: 'FTP Server', href: '/ftp-server' },
   { label: 'Area Coverage', href: '/area-coverage' },
   { label: 'Payment', href: '/payment' },
@@ -19,6 +21,7 @@ const NAV = [
 
 export default function Header() {
   const { settings } = useSite();
+  const { open: openConnection } = useConnection();
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -34,6 +37,8 @@ export default function Header() {
 
   const isActive = (href: string) =>
     href === '/' ? pathname === '/' : pathname.startsWith(href);
+
+  const connectText = settings.supportButtonText || 'সংযোগ করুন';
 
   const Brand = (
     <Link href="/" className="brand">
@@ -55,12 +60,9 @@ export default function Header() {
         <div className="topbar">
           <div className="container">
             <a href={`tel:${settings.topbarPhone}`} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <Phone size={15} /> 24/7 Call: {settings.topbarPhone}
+              <Phone size={15} /> 24/7 Call: <span className="topbar-phone">{settings.topbarPhone}</span>
             </a>
             <div className="topbar-socials">
-              <span className="topbar-text-hide" style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                <ShieldCheck size={15} /> {settings.topbarText}
-              </span>
               {settings.socials?.slice(0, 4).map((s, i) => (
                 <a key={i} href={s.url} target="_blank" rel="noreferrer" aria-label={s.platform}>
                   <SocialIcon platform={s.platform} size={14} />
@@ -87,9 +89,9 @@ export default function Header() {
             <Link href="/admin" aria-label="Admin Login" style={{ color: 'var(--ink)', display: 'flex', alignItems: 'center', padding: '8px' }}>
               <User size={22} />
             </Link>
-            <Link href={settings.supportButtonLink || '/contact'} className="btn btn-ghost nav-support" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>
-              {settings.supportButtonText}
-            </Link>
+            <button onClick={openConnection} className="btn btn-primary nav-support" style={{ padding: '10px 22px', fontSize: '0.92rem' }}>
+              {connectText}
+            </button>
             <button className="nav-toggle" onClick={() => setOpen(true)} aria-label="Open menu">
               <Menu size={22} />
             </button>
@@ -115,9 +117,9 @@ export default function Header() {
               {n.label}
             </Link>
           ))}
-          <Link href={settings.supportButtonLink || '/contact'} className="btn btn-primary" style={{ marginTop: '1rem' }}>
-            {settings.supportButtonText}
-          </Link>
+          <button onClick={() => { setOpen(false); openConnection(); }} className="btn btn-primary" style={{ marginTop: '1rem' }}>
+            {connectText}
+          </button>
         </div>
       </div>
     </header>

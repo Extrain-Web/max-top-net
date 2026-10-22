@@ -2,12 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, ShieldCheck } from 'lucide-react';
 import { useSite } from './SiteProvider';
 import SocialIcon from './Social';
+import { useConnection } from './ConnectionModal';
 
 export default function Footer() {
   const { settings } = useSite();
+  const { open: openConnection } = useConnection();
   const [year, setYear] = useState(2026);
   useEffect(() => setYear(new Date().getFullYear()), []);
 
@@ -65,12 +67,21 @@ export default function Footer() {
               <span style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                 <MapPin size={18} color="var(--primary)" style={{ flexShrink: 0, marginTop: 2 }} /> {settings.address}
               </span>
-              <Link href="/contact" className="btn btn-primary" style={{ marginTop: '0.4rem', justifyContent: 'center' }}>
-                <Send size={16} /> Get Connection
-              </Link>
+              <button onClick={openConnection} className="btn btn-primary" style={{ marginTop: '0.4rem', justifyContent: 'center', width: '100%' }}>
+                <Send size={16} /> {settings.supportButtonText || 'সংযোগ করুন'}
+              </button>
             </div>
           </div>
         </div>
+
+        {/* BTRC approved badge */}
+        {settings.topbarText && (
+          <div style={{ display: 'flex', justifyContent: 'center', paddingBottom: '1.5rem' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 18px', borderRadius: 40, background: 'rgba(139,190,31,0.12)', border: '1px solid rgba(139,190,31,0.3)', color: 'var(--primary)', fontWeight: 700, fontSize: '0.88rem' }}>
+              <ShieldCheck size={16} /> {settings.topbarText}
+            </span>
+          </div>
+        )}
       </div>
       <div className="footer-bottom">
         &copy; {year} {settings.logoTextLight}{settings.logoTextBold}. All rights reserved. &nbsp;|&nbsp; Designed with ♥ for Bangladesh

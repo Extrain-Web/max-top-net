@@ -84,52 +84,82 @@ function Decoration({ theme, accent }: { theme: ThemeKey; accent: string }) {
 
 function Banner({ o, large }: { o: OfferBanner; large?: boolean }) {
   const t = THEMES[(o.theme || 'discount') as ThemeKey] || THEMES.discount;
-  const inner = (
-    <div
-      className="offer-card"
-      style={{
-        position: 'relative', borderRadius: 22, overflow: 'hidden', height: '100%',
-        minHeight: large ? 300 : 210, background: t.grad, boxShadow: 'var(--shadow)',
-        cursor: o.link ? 'pointer' : 'default',
-      }}
-    >
-      <Decoration theme={(o.theme || 'discount') as ThemeKey} accent={t.accent} />
+  const hasText = !!(o.badge || o.title || o.subtitle || o.discount || o.buttonText);
 
-      <div style={{ position: 'relative', zIndex: 2, display: 'flex', alignItems: 'center', gap: large ? '2rem' : '1rem', height: '100%', padding: large ? '2.4rem' : '1.7rem' }}>
-        <div style={{ flex: 1, minWidth: 0 }}>
-          {o.badge && (
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: t.accent, color: t.accentText, padding: large ? '6px 16px' : '5px 12px', borderRadius: 30, fontSize: large ? '0.82rem' : '0.7rem', fontWeight: 800, letterSpacing: 1, marginBottom: 12 }}>
-              <Gift size={13} /> {o.badge}
-            </span>
-          )}
-          <h3 style={{ color: '#fff', fontSize: large ? 'clamp(1.7rem,3vw,2.5rem)' : '1.35rem', lineHeight: 1.12, marginBottom: o.discount ? 8 : 10, textShadow: '0 2px 12px rgba(0,0,0,0.25)' }}>
-            {o.title}
-          </h3>
-          {o.discount && (
-            <div style={{ display: 'inline-block', color: t.accent, fontWeight: 900, fontSize: large ? '2rem' : '1.4rem', fontFamily: 'var(--font-display)', marginBottom: 8, textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}>
-              {o.discount}
-            </div>
-          )}
-          {o.subtitle && (
-            <p style={{ color: 'rgba(255,255,255,0.92)', fontSize: large ? '1.02rem' : '0.86rem', lineHeight: 1.5, marginBottom: 16, maxWidth: 440 }}>{o.subtitle}</p>
-          )}
-          {o.buttonText && (
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: t.accent, color: t.accentText, padding: large ? '11px 24px' : '9px 18px', borderRadius: 10, fontWeight: 800, fontSize: large ? '0.98rem' : '0.84rem', boxShadow: '0 8px 20px rgba(0,0,0,0.2)' }}>
-              {o.buttonText} <ArrowRight size={16} />
-            </span>
-          )}
-        </div>
+  let inner: React.ReactNode;
 
-        {o.image && (
-          <div style={{ flexShrink: 0, position: 'relative' }}>
-            <div style={{ position: 'absolute', inset: -6, borderRadius: '50%', border: `2px dashed ${t.accent}`, opacity: 0.7 }} />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={imgUrl(o.image)} alt={o.title} style={{ width: large ? 150 : 92, height: large ? 150 : 92, borderRadius: '50%', objectFit: 'cover', border: `3px solid ${t.accent}`, boxShadow: '0 10px 26px rgba(0,0,0,0.3)' }} />
+  // ---- Image mode: uploaded banner image, no dark overlay; text/button optional ----
+  if (o.image) {
+    inner = (
+      <div
+        className="offer-card"
+        style={{
+          position: 'relative', borderRadius: 22, overflow: 'hidden', height: '100%',
+          minHeight: large ? 300 : 210, background: '#eef2f7', boxShadow: 'var(--shadow)',
+          cursor: o.link ? 'pointer' : 'default',
+        }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="offer-img" src={imgUrl(o.image)} alt={o.title || 'offer'} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+
+        {hasText && (
+          <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, zIndex: 2, padding: large ? '1.5rem' : '1.1rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8, background: 'linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.15) 70%, transparent 100%)' }}>
+            {o.badge && (
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, background: 'var(--primary)', color: 'var(--ink)', padding: '4px 11px', borderRadius: 30, fontSize: '0.68rem', fontWeight: 800, letterSpacing: 0.5 }}>
+                <Gift size={11} /> {o.badge}
+              </span>
+            )}
+            {o.title && <h3 style={{ color: '#fff', fontSize: large ? '1.5rem' : '1.15rem', lineHeight: 1.15, textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}>{o.title}</h3>}
+            {o.discount && <div style={{ color: 'var(--primary)', fontWeight: 900, fontSize: large ? '1.4rem' : '1.1rem', fontFamily: 'var(--font-display)', textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}>{o.discount}</div>}
+            {o.subtitle && <p style={{ color: 'rgba(255,255,255,0.92)', fontSize: '0.84rem', lineHeight: 1.4, maxWidth: 440 }}>{o.subtitle}</p>}
+            {o.buttonText && (
+              <span className="offer-mini-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'var(--primary)', color: 'var(--ink)', padding: '7px 15px', borderRadius: 8, fontWeight: 800, fontSize: '0.8rem', marginTop: 2 }}>
+                {o.buttonText} <ArrowRight size={14} />
+              </span>
+            )}
           </div>
         )}
       </div>
-    </div>
-  );
+    );
+  } else {
+    // ---- Theme mode: CSS festival design (gradient + decorations + text) ----
+    inner = (
+      <div
+        className="offer-card"
+        style={{
+          position: 'relative', borderRadius: 22, overflow: 'hidden', height: '100%',
+          minHeight: large ? 300 : 210, background: t.grad, boxShadow: 'var(--shadow)',
+          cursor: o.link ? 'pointer' : 'default',
+        }}
+      >
+        <Decoration theme={(o.theme || 'discount') as ThemeKey} accent={t.accent} />
+        <div style={{ position: 'relative', zIndex: 2, display: 'flex', alignItems: 'center', height: '100%', padding: large ? '2.4rem' : '1.7rem' }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            {o.badge && (
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: t.accent, color: t.accentText, padding: large ? '6px 16px' : '5px 12px', borderRadius: 30, fontSize: large ? '0.82rem' : '0.7rem', fontWeight: 800, letterSpacing: 1, marginBottom: 12 }}>
+                <Gift size={13} /> {o.badge}
+              </span>
+            )}
+            {o.title && (
+              <h3 style={{ color: '#fff', fontSize: large ? 'clamp(1.7rem,3vw,2.5rem)' : '1.35rem', lineHeight: 1.12, marginBottom: o.discount ? 8 : 10, textShadow: '0 2px 12px rgba(0,0,0,0.25)' }}>{o.title}</h3>
+            )}
+            {o.discount && (
+              <div style={{ display: 'inline-block', color: t.accent, fontWeight: 900, fontSize: large ? '2rem' : '1.4rem', fontFamily: 'var(--font-display)', marginBottom: 8, textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}>{o.discount}</div>
+            )}
+            {o.subtitle && (
+              <p style={{ color: 'rgba(255,255,255,0.92)', fontSize: large ? '1.02rem' : '0.86rem', lineHeight: 1.5, marginBottom: 16, maxWidth: 440 }}>{o.subtitle}</p>
+            )}
+            {o.buttonText && (
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: t.accent, color: t.accentText, padding: large ? '11px 24px' : '9px 18px', borderRadius: 10, fontWeight: 800, fontSize: large ? '0.98rem' : '0.84rem', boxShadow: '0 8px 20px rgba(0,0,0,0.2)' }}>
+                {o.buttonText} <ArrowRight size={16} />
+              </span>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return o.link ? <Link href={o.link} style={{ height: '100%', display: 'block' }}>{inner}</Link> : inner;
 }
 

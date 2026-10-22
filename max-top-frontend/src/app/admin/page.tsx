@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import {
   LayoutDashboard, Settings as SettingsIcon, Image as ImageIcon, Grid3x3, Info, Tag,
   Package, Sparkles, HelpCircle, Star, Handshake, BellRing, FileText, Server, Tv,
-  Gamepad2, MapPin, CreditCard, MessageSquare, KeyRound, LogOut, Menu, X, Loader2, Lock,
+  Gamepad2, MapPin, CreditCard, MessageSquare, KeyRound, LogOut, Menu, X, Loader2, Lock, Wrench,
 } from 'lucide-react';
 import { apiGet, login, clearToken, getToken } from '@/lib/api';
 import { RESOURCES, SETTINGS_FIELDS, ABOUT_FIELDS, POPUP_FIELDS } from '@/components/admin/schemas';
@@ -37,6 +37,7 @@ const NAV = [
     group: 'Menu Pages',
     items: [
       { id: 'pages', label: 'Page Content', icon: FileText },
+      { id: 'service-items', label: 'Services', icon: Wrench },
       { id: 'ftp', label: 'FTP Links', icon: Server },
       { id: 'channels', label: 'TV Channels', icon: Tv },
       { id: 'game-servers', label: 'Game Servers', icon: Gamepad2 },

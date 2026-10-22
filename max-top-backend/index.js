@@ -23,6 +23,7 @@ const FtpLink = require('./models/FtpLink');
 const Channel = require('./models/Channel');
 const GameServer = require('./models/GameServer');
 const PaymentMethod = require('./models/PaymentMethod');
+const ServiceItem = require('./models/ServiceItem');
 const Page = require('./models/Page');
 
 const app = express();
@@ -60,6 +61,7 @@ app.use('/api/ftp', crudRouter(FtpLink));
 app.use('/api/channels', crudRouter(Channel));
 app.use('/api/game-servers', crudRouter(GameServer));
 app.use('/api/payment-methods', crudRouter(PaymentMethod));
+app.use('/api/service-items', crudRouter(ServiceItem));
 
 // --- Pages (by slug) ---
 const pageRouter = express.Router();

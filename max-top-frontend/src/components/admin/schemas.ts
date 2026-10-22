@@ -187,6 +187,18 @@ export const RESOURCES: Record<string, ResourceConfig> = {
     ],
     defaultItem: { name: '', type: 'Personal', number: '', color: '#8bbe1f', link: 'https://maxtoptech.ispdigital.cloud/BillPayment/Index', logo: '', instructions: '', order: 0, active: true },
   },
+  'service-items': {
+    endpoint: '/service-items', title: 'Services (Service Page)', singular: 'Service', titleKey: 'title', subKey: 'description', imageKey: 'image',
+    fields: [
+      { name: 'title', label: 'Service Title' },
+      { name: 'description', label: 'Description', type: 'textarea' },
+      { name: 'icon', label: 'Icon', type: 'select', options: ICON_NAMES },
+      { name: 'image', label: 'Image (optional — shown instead of icon)', type: 'image' },
+      { name: 'link', label: 'Link (optional)', half: true },
+      order, active,
+    ],
+    defaultItem: { title: '', description: '', icon: 'Wifi', image: '', link: '', order: 0, active: true },
+  },
 };
 
 /* Singleton schemas */
@@ -237,6 +249,7 @@ export const SETTINGS_FIELDS: FieldDef[] = [
 ];
 
 export const PAGE_SLUGS = [
+  { slug: 'service', name: 'Service' },
   { slug: 'ftp-server', name: 'FTP Server' },
   { slug: 'live-tv', name: 'Live TV' },
   { slug: 'game-server', name: 'Game Server' },

@@ -155,6 +155,7 @@ button { font-family: inherit; cursor: pointer; }
 .topbar a { color: #dfe7ef; transition: var(--transition); }
 .topbar a:hover { color: var(--primary); }
 .topbar-socials { display: flex; gap: 14px; align-items: center; }
+.topbar-phone { color: var(--primary); font-weight: 800; letter-spacing: 0.3px; }
 
 .navbar { background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); transition: var(--transition); }
 .navbar.scrolled { box-shadow: var(--shadow); }
