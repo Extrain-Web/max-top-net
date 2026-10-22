@@ -34,22 +34,21 @@ export default function ServicePage() {
           <div className="grid auto-fit-280">
             {items.map((s, i) => {
               const card = (
-                <div className="card card-hover svc-card" style={{ padding: '2.2rem', height: '100%', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
-                  <div className="svc-card-ic" style={{ width: 70, height: 70, borderRadius: 18, background: 'var(--primary-soft)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.4rem', overflow: 'hidden', transition: 'all 0.3s' }}>
+                <div className="svc-card">
+                  <span className="svc-accent" />
+                  <div className="svc-card-ic">
                     {s.image ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={imgUrl(s.image)} alt={s.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      <img src={imgUrl(s.image)} alt={s.title} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 18 }} />
                     ) : (
-                      <Icon name={s.icon} size={34} color="var(--primary-700)" />
+                      <Icon name={s.icon} size={32} />
                     )}
                   </div>
-                  <h3 style={{ fontSize: '1.3rem', marginBottom: '0.7rem' }}>{s.title}</h3>
-                  <p style={{ color: 'var(--foreground-muted)', lineHeight: 1.65, fontSize: '0.96rem', flex: 1 }}>{s.description}</p>
-                  {s.link && (
-                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'var(--primary-700)', fontWeight: 700, fontSize: '0.92rem', marginTop: '1.2rem' }}>
-                      Learn More <ArrowRight size={15} />
-                    </span>
-                  )}
+                  <h3 style={{ fontSize: '1.25rem', marginBottom: '0.6rem' }}>{s.title}</h3>
+                  <p style={{ color: 'var(--foreground-muted)', lineHeight: 1.6, fontSize: '0.94rem', flex: 1 }}>{s.description}</p>
+                  <span className="svc-more">
+                    Learn More <ArrowRight size={15} />
+                  </span>
                 </div>
               );
               return (
@@ -70,7 +69,16 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
-      <style>{`.svc-card:hover .svc-card-ic { background: var(--primary); } .svc-card:hover .svc-card-ic svg { color: var(--ink) !important; }`}</style>
+      <style>{`
+        .svc-card { position: relative; background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 2.2rem 2rem; height: 100%; display: flex; flex-direction: column; overflow: hidden; transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s, border-color 0.35s; }
+        .svc-card:hover { transform: translateY(-8px); box-shadow: 0 26px 52px rgba(15,27,45,0.12); border-color: rgba(139,190,31,0.5); }
+        .svc-accent { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--primary-700)); transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease; }
+        .svc-card:hover .svc-accent { transform: scaleX(1); }
+        .svc-card-ic { width: 72px; height: 72px; border-radius: 18px; background: var(--primary-soft); color: var(--primary-700); display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem; transition: all 0.35s ease; }
+        .svc-card:hover .svc-card-ic { background: linear-gradient(135deg, var(--primary), var(--primary-700)); color: var(--ink); transform: rotate(-6deg) scale(1.05); box-shadow: var(--shadow-primary); }
+        .svc-more { display: inline-flex; align-items: center; gap: 6px; color: var(--primary-700); font-weight: 700; font-size: 0.9rem; margin-top: 1.3rem; opacity: 0; transform: translateX(-8px); transition: all 0.3s ease; }
+        .svc-card:hover .svc-more { opacity: 1; transform: none; }
+      `}</style>
     </>
   );
 }

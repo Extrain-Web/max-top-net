@@ -3,16 +3,20 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Phone, Menu, X, User } from 'lucide-react';
+import { Phone, Menu, X, User, ChevronDown } from 'lucide-react';
 import { useSite } from './SiteProvider';
 import SocialIcon from './Social';
+import Icon from './Icon';
 import { useConnection } from './ConnectionModal';
-import { imgUrl } from '@/lib/api';
+import { getData, imgUrl } from '@/lib/api';
+import type { ServiceItem, FtpLink } from '@/lib/types';
 
-const NAV = [
+type NavItem = { label: string; href: string; dropdown?: 'service' | 'ftp' };
+
+const NAV: NavItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'Service', href: '/service' },
-  { label: 'FTP Server', href: '/ftp-server' },
+  { label: 'Service', href: '/service', dropdown: 'service' },
+  { label: 'FTP Server', href: '/ftp-server', dropdown: 'ftp' },
   { label: 'Area Coverage', href: '/area-coverage' },
   { label: 'Payment', href: '/payment' },
   { label: 'About us', href: '/about' },
@@ -25,6 +29,9 @@ export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [services, setServices] = useState<ServiceItem[]>([]);
+  const [ftp, setFtp] = useState<FtpLink[]>([]);
+  const [mobileSub, setMobileSub] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -35,10 +42,20 @@ export default function Header() {
 
   useEffect(() => setOpen(false), [pathname]);
 
+  useEffect(() => {
+    getData<ServiceItem[]>('/service-items', []).then(setServices);
+    getData<FtpLink[]>('/ftp', []).then(setFtp);
+  }, []);
+
   const isActive = (href: string) =>
     href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   const connectText = settings.supportButtonText || 'সংযোগ করুন';
+
+  const dropItems = (kind: 'service' | 'ftp') =>
+    kind === 'service'
+      ? services.map((s) => ({ label: s.title, icon: s.icon }))
+      : ftp.map((f) => ({ label: f.name, icon: 'Server' }));
 
   const Brand = (
     <Link href="/" className="brand">
@@ -78,11 +95,31 @@ export default function Header() {
           {Brand}
 
           <nav className="nav-links">
-            {NAV.map((n) => (
-              <Link key={n.href} href={n.href} className={`nav-link ${isActive(n.href) ? 'active' : ''}`}>
-                {n.label}
-              </Link>
-            ))}
+            {NAV.map((n) => {
+              const items = n.dropdown ? dropItems(n.dropdown) : [];
+              if (n.dropdown && items.length) {
+                return (
+                  <div key={n.href} className="nav-dd">
+                    <Link href={n.href} className={`nav-link ${isActive(n.href) ? 'active' : ''}`}>
+                      {n.label} <ChevronDown size={15} style={{ marginLeft: 2 }} />
+                    </Link>
+                    <div className="nav-dropdown">
+                      {items.map((it, i) => (
+                        <Link key={i} href={n.href} className="nav-dd-item">
+                          <span className="nav-dd-ic"><Icon name={it.icon} size={17} color="var(--primary-700)" /></span>
+                          {it.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <Link key={n.href} href={n.href} className={`nav-link ${isActive(n.href) ? 'active' : ''}`}>
+                  {n.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -112,11 +149,32 @@ export default function Header() {
               <X size={22} />
             </button>
           </div>
-          {NAV.map((n) => (
-            <Link key={n.href} href={n.href} className={`nav-link ${isActive(n.href) ? 'active' : ''}`}>
-              {n.label}
-            </Link>
-          ))}
+          {NAV.map((n) => {
+            const items = n.dropdown ? dropItems(n.dropdown) : [];
+            if (n.dropdown && items.length) {
+              const expanded = mobileSub === n.dropdown;
+              return (
+                <div key={n.href}>
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <Link href={n.href} className={`nav-link ${isActive(n.href) ? 'active' : ''}`} style={{ flex: 1 }}>{n.label}</Link>
+                    <button onClick={() => setMobileSub(expanded ? null : n.dropdown!)} aria-label="Toggle submenu" style={{ background: 'transparent', border: 'none', padding: 10, color: 'var(--ink)' }}>
+                      <ChevronDown size={18} style={{ transform: expanded ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
+                    </button>
+                  </div>
+                  {expanded && (
+                    <div style={{ paddingLeft: 14, display: 'flex', flexDirection: 'column' }}>
+                      {items.map((it, i) => (
+                        <Link key={i} href={n.href} className="nav-link" style={{ fontSize: '0.92rem', padding: '9px 12px', color: 'var(--foreground-muted)' }}>{it.label}</Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+            return (
+              <Link key={n.href} href={n.href} className={`nav-link ${isActive(n.href) ? 'active' : ''}`}>{n.label}</Link>
+            );
+          })}
           <button onClick={() => { setOpen(false); openConnection(); }} className="btn btn-primary" style={{ marginTop: '1rem' }}>
             {connectText}
           </button>
