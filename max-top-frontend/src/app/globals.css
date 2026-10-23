@@ -184,25 +184,26 @@ button { font-family: inherit; cursor: pointer; }
 .nav-dropdown {
   position: absolute; top: 100%; left: 0; right: 0; width: 100%;
   background: #fff; border-top: 1px solid var(--border);
-  box-shadow: 0 24px 40px rgba(15,27,45,0.1); padding: 2.8rem 0 3rem;
+  box-shadow: 0 24px 40px rgba(15,27,45,0.1); padding: 2.2rem 0;
   opacity: 0; visibility: hidden; transform: translateY(8px);
   transition: all 0.24s ease; z-index: 210;
 }
-.nav-dd-grid { display: flex; gap: 2.5rem; align-items: stretch; }
+.nav-dropdown .container { display: block; height: auto; align-items: stretch; }
+.nav-dd-grid { display: flex; gap: 3rem; align-items: center; }
 .nav-dd-left { flex: 1; min-width: 0; }
-.nav-dd-head { font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--primary-700); padding: 0 14px 10px; margin-bottom: 8px; border-bottom: 1px solid var(--border); }
-.nav-dropdown-inner { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem 1rem; }
-.nav-dd-promo { width: 290px; flex-shrink: 0; border: 1.5px solid var(--border); border-radius: 18px; padding: 24px 22px 26px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; background: var(--surface); }
-.nav-dd-promo .promo-badge { background: var(--primary-soft); color: var(--primary-700); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 14px; border-radius: 30px; }
-.nav-dd-promo h5 { font-family: var(--font-display); font-size: 1.2rem; color: var(--ink); margin: 2px 0; }
-.nav-dd-promo .promo-price { font-size: 1.9rem; font-weight: 800; color: var(--primary-700); line-height: 1; }
-.nav-dd-promo .promo-price span { font-size: 0.85rem; font-weight: 500; color: var(--foreground-muted); }
-.nav-dd-promo .promo-speed { display: flex; align-items: center; gap: 8px; color: var(--ink); font-weight: 600; font-size: 0.95rem; }
+.nav-dd-head { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--primary-700); padding: 0 12px; margin-bottom: 1.1rem; }
+.nav-dropdown-inner { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.35rem 1.4rem; }
+.nav-dd-promo { width: 262px; flex-shrink: 0; align-self: center; border: 1px solid var(--border); border-radius: 16px; padding: 22px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; background: #fff; box-shadow: var(--shadow-sm); }
+.nav-dd-promo .promo-badge { background: var(--primary-soft); color: var(--primary-700); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 13px; border-radius: 30px; }
+.nav-dd-promo h5 { font-family: var(--font-display); font-size: 1.1rem; color: var(--ink); margin: 0; }
+.nav-dd-promo .promo-price { font-size: 1.7rem; font-weight: 800; color: var(--primary-700); line-height: 1; }
+.nav-dd-promo .promo-price span { font-size: 0.82rem; font-weight: 500; color: var(--foreground-muted); }
+.nav-dd-promo .promo-speed { display: flex; align-items: center; gap: 8px; color: var(--ink); font-weight: 600; font-size: 0.92rem; }
 .nav-dd-promo .btn { width: 100%; justify-content: center; margin-top: 4px; }
 .nav-dd:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
-.nav-dd-item { display: flex; align-items: center; gap: 13px; padding: 15px 14px; border-radius: 12px; font-size: 0.95rem; font-weight: 600; color: var(--ink); transition: all 0.18s; white-space: nowrap; }
+.nav-dd-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 10px; font-size: 0.93rem; font-weight: 600; color: var(--ink); transition: all 0.18s; white-space: nowrap; }
 .nav-dd-item:hover { background: var(--primary-soft); color: var(--primary-700); }
-.nav-dd-ic { width: 40px; height: 40px; border-radius: 11px; background: var(--primary-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.18s; }
+.nav-dd-ic { width: 36px; height: 36px; border-radius: 10px; background: var(--primary-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.18s; }
 .nav-dd-item:hover .nav-dd-ic { background: #fff; }
 
 .nav-toggle { display: none; background: var(--primary-soft); border: none; color: var(--primary-700); width: 44px; height: 44px; border-radius: 10px; align-items: center; justify-content: center; }
