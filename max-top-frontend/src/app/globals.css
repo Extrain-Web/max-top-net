@@ -155,11 +155,14 @@ button { font-family: inherit; cursor: pointer; }
 .topbar a { color: var(--ink); transition: var(--transition); }
 .topbar-links { display: flex; gap: 24px; align-items: center; font-weight: 600; }
 .topbar-links a:hover { color: var(--primary); }
-.topbar-hotline { display: flex; align-items: center; gap: 10px; }
-.topbar-hotline .th-ic { width: 36px; height: 36px; border-radius: 50%; background: var(--primary); color: var(--ink); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px var(--primary-glow); }
+.topbar-right { display: flex; align-items: center; gap: 18px; }
+.topbar-hotline { display: flex; align-items: center; gap: 9px; }
+.topbar-hotline .th-ic { width: 30px; height: 30px; border-radius: 50%; background: var(--primary-soft); color: var(--primary-700); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .topbar-hotline .th-txt { display: flex; flex-direction: column; line-height: 1.15; }
-.topbar-hotline .th-txt small { font-size: 0.68rem; color: var(--foreground-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
-.topbar-hotline .th-txt strong { font-size: 1.02rem; color: var(--primary-700); font-weight: 800; letter-spacing: 0.3px; }
+.topbar-hotline .th-txt small { font-size: 0.66rem; color: var(--foreground-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.topbar-hotline .th-txt strong { font-size: 0.9rem; color: var(--ink); font-weight: 600; letter-spacing: 0.2px; }
+.topbar-user { color: var(--ink); display: flex; align-items: center; padding-left: 18px; border-left: 1px solid var(--border); }
+.topbar-user:hover { color: var(--primary); }
 .topbar-socials { display: flex; gap: 14px; align-items: center; }
 .topbar-phone { color: var(--primary); font-weight: 800; letter-spacing: 0.3px; }
 
@@ -181,14 +184,14 @@ button { font-family: inherit; cursor: pointer; }
 .nav-dropdown {
   position: absolute; top: 100%; left: 0; right: 0; width: 100%;
   background: #fff; border-top: 1px solid var(--border);
-  box-shadow: 0 24px 40px rgba(15,27,45,0.1); padding: 1.6rem 0;
+  box-shadow: 0 24px 40px rgba(15,27,45,0.1); padding: 2.8rem 0 3rem;
   opacity: 0; visibility: hidden; transform: translateY(8px);
   transition: all 0.24s ease; z-index: 210;
 }
 .nav-dd-head { font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--primary-700); padding: 0 14px 10px; margin-bottom: 8px; border-bottom: 1px solid var(--border); }
-.nav-dropdown-inner { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px 1rem; }
+.nav-dropdown-inner { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem 1rem; }
 .nav-dd:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
-.nav-dd-item { display: flex; align-items: center; gap: 13px; padding: 11px 14px; border-radius: 12px; font-size: 0.95rem; font-weight: 600; color: var(--ink); transition: all 0.18s; white-space: nowrap; }
+.nav-dd-item { display: flex; align-items: center; gap: 13px; padding: 15px 14px; border-radius: 12px; font-size: 0.95rem; font-weight: 600; color: var(--ink); transition: all 0.18s; white-space: nowrap; }
 .nav-dd-item:hover { background: var(--primary-soft); color: var(--primary-700); }
 .nav-dd-ic { width: 40px; height: 40px; border-radius: 11px; background: var(--primary-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.18s; }
 .nav-dd-item:hover .nav-dd-ic { background: #fff; }

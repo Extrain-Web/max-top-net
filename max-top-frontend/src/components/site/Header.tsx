@@ -79,13 +79,18 @@ export default function Header() {
               <Link href="/about">About us</Link>
               <Link href="/payment">Payment</Link>
             </div>
-            <a href={`tel:${settings.topbarPhone}`} className="topbar-hotline">
-              <span className="th-ic"><Phone size={16} /></span>
-              <span className="th-txt">
-                <small>Hotline (24/7)</small>
-                <strong>{settings.topbarPhone}</strong>
-              </span>
-            </a>
+            <div className="topbar-right">
+              <a href={`tel:${settings.topbarPhone}`} className="topbar-hotline">
+                <span className="th-ic"><Phone size={15} /></span>
+                <span className="th-txt">
+                  <small>Hotline (24/7)</small>
+                  <strong>{settings.topbarPhone}</strong>
+                </span>
+              </a>
+              <Link href="/admin" aria-label="Admin Login" className="topbar-user">
+                <User size={20} />
+              </Link>
+            </div>
           </div>
         </div>
       )}
@@ -130,9 +135,6 @@ export default function Header() {
           </nav>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <Link href="/admin" aria-label="Admin Login" style={{ color: 'var(--ink)', display: 'flex', alignItems: 'center', padding: '8px' }}>
-              <User size={22} />
-            </Link>
             <button onClick={openConnection} className="btn btn-primary nav-support" style={{ padding: '10px 22px', fontSize: '0.92rem' }}>
               {connectText}
             </button>
