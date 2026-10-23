@@ -105,7 +105,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container footer-bottom-row">
           <span className="footer-copy">
-            &copy; {year} {settings.logoTextLight}{settings.logoTextBold}. All rights reserved. &nbsp;|&nbsp; Designed with ♥ for Bangladesh
+            &copy; {year} {settings.logoTextLight}{settings.logoTextBold}. All rights reserved. &nbsp;|&nbsp; Develop by: <a href="https://www.extrainweb.com/" target="_blank" rel="noreferrer" className="footer-dev">Extrain Web</a>
           </span>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/faysy1756641916.png" alt="Accepted payment methods" className="footer-pay" />

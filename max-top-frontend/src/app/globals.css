@@ -238,6 +238,8 @@ button { font-family: inherit; cursor: pointer; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0; padding: 1.2rem 0; color: #8698ab; font-size: 0.88rem; }
 .footer-bottom-row { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
 .footer-copy { text-align: left; }
+.footer-dev { color: var(--primary); font-weight: 600; }
+.footer-dev:hover { text-decoration: underline; }
 .footer-pay { height: auto; width: 100%; max-width: 560px; border-radius: 10px; background: #fff; padding: 6px 12px; }
 @media (max-width: 680px) {
   .footer-bottom-row { flex-direction: column; align-items: center; text-align: center; }
