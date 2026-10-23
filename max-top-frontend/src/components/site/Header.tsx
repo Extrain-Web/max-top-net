@@ -3,12 +3,12 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Phone, Menu, X, User, ChevronDown } from 'lucide-react';
+import { Phone, Menu, X, User, ChevronDown, Wifi } from 'lucide-react';
 import { useSite } from './SiteProvider';
 import Icon from './Icon';
 import { useConnection } from './ConnectionModal';
 import { getData, imgUrl } from '@/lib/api';
-import type { ServiceItem, FtpLink } from '@/lib/types';
+import type { ServiceItem, FtpLink, Package } from '@/lib/types';
 
 type NavItem = { label: string; href: string; dropdown?: 'service' | 'ftp' };
 
@@ -30,6 +30,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [services, setServices] = useState<ServiceItem[]>([]);
   const [ftp, setFtp] = useState<FtpLink[]>([]);
+  const [packages, setPackages] = useState<Package[]>([]);
   const [mobileSub, setMobileSub] = useState<string | null>(null);
 
   useEffect(() => {
@@ -44,12 +45,15 @@ export default function Header() {
   useEffect(() => {
     getData<ServiceItem[]>('/service-items', []).then(setServices);
     getData<FtpLink[]>('/ftp', []).then(setFtp);
+    getData<Package[]>('/packages', []).then(setPackages);
   }, []);
 
   const isActive = (href: string) =>
     href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   const connectText = settings.supportButtonText || 'Get Connection';
+
+  const featured = packages.find((p) => p.popular) || packages[0];
 
   const dropItems = (kind: 'service' | 'ftp') =>
     kind === 'service'
@@ -110,16 +114,29 @@ export default function Header() {
                     </Link>
                     <div className="nav-dropdown">
                       <div className="container">
-                        <div className="nav-dd-head">
-                          {n.dropdown === 'service' ? 'Our Services' : 'FTP Server Categories'}
-                        </div>
-                        <div className="nav-dropdown-inner">
-                          {items.map((it, i) => (
-                            <Link key={i} href={n.href} className="nav-dd-item">
-                              <span className="nav-dd-ic"><Icon name={it.icon} size={20} color="var(--primary-700)" /></span>
-                              {it.label}
-                            </Link>
-                          ))}
+                        <div className="nav-dd-grid">
+                          <div className="nav-dd-left">
+                            <div className="nav-dd-head">
+                              {n.dropdown === 'service' ? 'Our Services' : 'FTP Server Categories'}
+                            </div>
+                            <div className="nav-dropdown-inner">
+                              {items.map((it, i) => (
+                                <Link key={i} href={n.href} className="nav-dd-item">
+                                  <span className="nav-dd-ic"><Icon name={it.icon} size={20} color="var(--primary-700)" /></span>
+                                  {it.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                          {featured && (
+                            <div className="nav-dd-promo">
+                              <span className="promo-badge">Popular Plan</span>
+                              <h5>{featured.name}</h5>
+                              <div className="promo-price">৳{featured.price}<span>/{featured.period}</span></div>
+                              <div className="promo-speed"><Wifi size={16} /> {featured.speed} {featured.unit}</div>
+                              <button onClick={openConnection} className="btn btn-primary">{connectText}</button>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
