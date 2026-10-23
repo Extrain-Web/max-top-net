@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Phone, Menu, X, User, ChevronDown } from 'lucide-react';
 import { useSite } from './SiteProvider';
-import SocialIcon from './Social';
 import Icon from './Icon';
 import { useConnection } from './ConnectionModal';
 import { getData, imgUrl } from '@/lib/api';
@@ -76,16 +75,17 @@ export default function Header() {
       {settings.topbarEnabled && (
         <div className="topbar">
           <div className="container">
-            <a href={`tel:${settings.topbarPhone}`} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <Phone size={15} /> 24/7 Call: <span className="topbar-phone">{settings.topbarPhone}</span>
-            </a>
-            <div className="topbar-socials">
-              {settings.socials?.slice(0, 4).map((s, i) => (
-                <a key={i} href={s.url} target="_blank" rel="noreferrer" aria-label={s.platform}>
-                  <SocialIcon platform={s.platform} size={14} />
-                </a>
-              ))}
+            <div className="topbar-links">
+              <Link href="/about">About us</Link>
+              <Link href="/payment">Payment</Link>
             </div>
+            <a href={`tel:${settings.topbarPhone}`} className="topbar-hotline">
+              <span className="th-ic"><Phone size={16} /></span>
+              <span className="th-txt">
+                <small>Hotline (24/7)</small>
+                <strong>{settings.topbarPhone}</strong>
+              </span>
+            </a>
           </div>
         </div>
       )}
