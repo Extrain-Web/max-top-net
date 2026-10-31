@@ -299,7 +299,7 @@ textarea.field { resize: vertical; min-height: 130px; }
   /* comfortable mobile gutter (desktop keeps the tighter 10px) */
   .container { padding: 0 18px; }
   /* shorter, content-sized hero on mobile so there's no big empty gap on top */
-  .hero-full { height: auto; min-height: 0; max-height: none; }
+  .hero-full { height: 60vw; min-height: 320px; max-height: 66vh; }
   .hero-full .container { padding-top: 2.4rem; padding-bottom: 2.6rem; }
   /* hide the top header bar on mobile; header is just the navbar now */
   .topbar { display: none; }
