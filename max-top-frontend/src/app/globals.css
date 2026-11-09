@@ -207,6 +207,11 @@ button { font-family: inherit; cursor: pointer; }
 .nav-dd-item:hover .nav-dd-ic { background: #fff; }
 
 .nav-toggle { display: none; background: var(--primary-soft); border: none; color: var(--primary-700); width: 44px; height: 44px; border-radius: 10px; align-items: center; justify-content: center; }
+/* admin login shortcut: only on mobile, where the topbar (with its user icon) is hidden */
+.nav-admin { display: none; border: 1px solid var(--border); background: #fff; color: var(--ink); width: 44px; height: 44px; border-radius: 10px; align-items: center; justify-content: center; transition: var(--transition); }
+.nav-admin:hover { color: var(--primary-700); border-color: var(--primary); }
+.mobile-admin-btn { margin-top: 0.6rem; display: flex; align-items: center; justify-content: center; gap: 8px; background: #fff; color: var(--ink); border: 1px solid var(--border); }
+.mobile-admin-btn:hover { border-color: var(--primary); color: var(--primary-700); }
 
 /* Mobile drawer */
 .mobile-drawer { position: fixed; inset: 0; z-index: 300; display: none; }
@@ -316,6 +321,7 @@ textarea.field { resize: vertical; min-height: 130px; }
   .hero-arrow { display: none; }
   /* hide the top header bar on mobile; header is just the navbar now */
   .topbar { display: none; }
+  .nav-admin { display: flex; }
   :root { --header-h: 69px; }
   .navbar .container { height: 68px; }
   .brand { font-size: 1.45rem; }

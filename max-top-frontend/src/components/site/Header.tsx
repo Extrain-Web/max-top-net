@@ -155,6 +155,9 @@ export default function Header() {
             <button onClick={openConnection} className="btn btn-primary nav-support" style={{ padding: '10px 22px', fontSize: '0.92rem' }}>
               {connectText}
             </button>
+            <Link href="/admin" aria-label="Admin Login" className="nav-admin">
+              <User size={21} />
+            </Link>
             <button className="nav-toggle" onClick={() => setOpen(true)} aria-label="Open menu">
               <Menu size={22} />
             </button>
@@ -204,6 +207,9 @@ export default function Header() {
           <button onClick={() => { setOpen(false); openConnection(); }} className="btn btn-primary" style={{ marginTop: '1rem' }}>
             {connectText}
           </button>
+          <Link href="/admin" className="btn mobile-admin-btn">
+            <User size={18} /> Admin Login
+          </Link>
         </div>
       </div>
     </header>
