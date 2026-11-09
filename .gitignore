@@ -3,11 +3,7 @@ node_modules/
 **/node_modules/
 
 # env / secrets — NEVER commit these
-.env
-.env.*
 !.env.example
-**/.env
-**/.env.*
 !**/.env.example
 
 # next.js
@@ -24,8 +20,8 @@ npm-debug.log*
 # OS / editor
 .DS_Store
 Thumbs.db
-.vscode/
 .idea/
 branch_structure.json
 temp_auto_push.bat
 temp_interactive_push.bat
+config.bat
